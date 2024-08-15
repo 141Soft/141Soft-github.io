@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>141Soft</title>
+  <script type="module" crossorigin src="/141Soft.github.io/assets/index-B0CPzj7G.js"></script>
+  <link rel="stylesheet" crossorigin href="/141Soft.github.io/assets/index-K-yP-zMs.css">
+</head>
+<body>
+    <div class="frame"></div>
+    <div class="mask-top"></div>
+    <div class="mask-bottom"></div>
+    <header class="site-header">
+        <h1><a href="/">141Soft</a></h1>
+        <nav class="site-nav">
+            <ul class="site-nav-list">
+                <li class="site-nav-link">
+                    <a href="/#about">About</a>
+                </li>
+                <li class="site-nav-link">
+                    <a href="/#projects">Projects</a>
+                </li>
+                <li class="site-nav-link">
+                    <a  href="/#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="page" x-data="{page: location.hash}" @hashchange.window="page = location.hash">
+        <div class="author" x-show="page === '#about'" x-transition:enter.duration.1000ms.delay.750ms x-transition:leave.duration.1000ms>
+            <h1>dan/</h1>
+            <h2>developer</h2>
+        </div>
+        <div class="page-about" x-show="page === '#about'" x-transition:enter.duration.1000ms.delay.750ms x-transition:leave.duration.1000ms>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+        <div class="page-project" x-show="page === '#projects'" x-transition:enter.duration.1000ms.delay.750ms x-transition:leave.duration.1000ms>
+            <ul class="project-list">
+                <li class="project-list-item"  x-data="{ display: false, title: '141Soft Portfolio', time: '2024 - August', slug: 'My personal portfolio website, I wanted something simple and eyecatching to hold links to my projects. It was a trial to get the CSS down but a solid learning experience. The site uses AlpineJS to handle interactivity and I wrote a small system for handling SPA using hash fragments. The repo for this is private but you are free to dig around with the inspector if you are curious.'}">
+                    <div class="project-top-line">
+                        <h3 class="project-title" x-text="title"></h3>
+                    <p class="project-time" x-text="time"></p>
+                    <button class="project-button" @click="display === false ? display = true : display = false" x-text="display === true ? '▲' : '▼'"></button>
+                    </div>
+                    <p class="project-slug" x-show="display === true" x-text="slug" x-transition.duration.500ms></p>
+                </li>
+                <li class="project-list-item"  x-data="{ display: false, title: 'Northcoders', time: '2024 - April/July', slug: 'A Software development bootcamp I enrolled on in April of 2024, the course focused on full stack web development and I managed to learn a fair amount. The tech stack used was primarily PostgreSQL, Express, React and Node, but I had oppurtunity to try out React Native, MongoDB and Three.js for my final project, which you can find linked below.'}">
+                    <div class="project-top-line">
+                        <h3 class="project-title" x-text="title"></h3>
+                    <p class="project-time" x-text="time"></p>
+                    <button class="project-button" @click="display === false ? display = true : display = false" x-text="display === true ? '▲' : '▼'"></button>
+                    </div>
+                    <p class="project-slug" x-show="display === true" x-text="slug" x-transition.duration.500ms></p>
+                    <a x-show="display === true" x-transition.duration.500ms href="https://github.com/SixteenThousand/Ready-Salted-Front-End" target="_blank">ReadySalted Github ▶</a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-contact" x-show="page === '#contact'" x-transition:enter.duration.1000ms.delay.750ms x-transition:leave.duration.1000ms>
+            <img src="/141Soft.github.io/github-logo-white.png" alt="github logo" width="20" height="20">
+            <a href="https://github.com/141Soft">Github</a>
+            <a href="mailto:141soft@proton.me">141soft@proton.me</a>
+        </div> 
+    </div> 
+</body>
+</html>
