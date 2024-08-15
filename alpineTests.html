@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>141.dev</title>
+</head>
+<body>
+    <script src="./main.js" type="module"></script>
+    <div class="title-box">
+        <h1 class="title"><span class="shrink-spacing">141 .</span> dev</h1>
+    </div>
+
+    <div class="menu" x-data :class="$store.listSelector.selected">
+        <ul>
+            <li @click="$store.listSelector.selected = $el.textContent;">option 1</li>
+            <li @click="$store.listSelector.selected = $el.textContent;">option 2</li>
+            <li @click="$store.listSelector.selected = $el.textContent;">option 3</li>
+        </ul>
+    </div>
+
+    <div x-data :class="$store.listSelector.selected">
+        <div x-show="$store.listSelector.selected === 'option 3'" x-transition>
+            <p>Some Stuff</p>
+        </div>
+    </div>
+    
+    <div  x-data :class="$store.listSelector.selected">
+        <p x-text="$store.listSelector.selected"></p>
+    </div>
+    
+    <ul x-data :class="$store.testArticles">
+        <template x-for="article in $store.testArticles">
+            <li>
+                <span x-text="article"></span>
+            </li>
+        </template>
+    </ul>
+
+    
+</body>
+</html>
