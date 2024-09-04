@@ -111,7 +111,7 @@ a {
 
 .author {
     position: fixed;
-    font-weight: ligher;
+    font-weight: lighter;
     font-size: 1rem;
     direction: rtl;
     top: 2.8rem;
@@ -220,5 +220,79 @@ a {
     position: fixed;
     bottom: 4rem;
     left: 4rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* Mobile */
+    .site-header {
+        font-size: 1rem;
+        display: flex;
+        height: 20%;
+        padding: 1.25rem 0;
+        position: fixed;
+        left: 2.5rem;
+        top: 1rem;
+        writing-mode:horizontal-tb;
+    }
+    
+    .site-header > h1 {
+        font-size: 1.5rem;
+    }
+    
+    .site-header > * {
+        flex: 1 1 auto;
+        padding-bottom: 0.5rem;
+    }
+    
+    .site-nav-list {
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    .author {
+        position: fixed;
+        font-weight: lighter;
+        font-size: 1rem;
+        top: 5rem;
+        right: 2.5rem;
+    }
+
+    .frame {
+        top: 1rem;
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+    }
+
+    .mask-bottom {
+        height: 1rem;
+    }
+
+    .mask-top {
+        height: 1rem;
+    }
+
+    .page-about {
+        bottom: 2rem;
+        left: 2rem;
+        width: 80%;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    
+    .project-time {
+        font-size: 1rem;
+    }
+
+    .page-contact {
+        left: 2rem;
+        bottom: 2rem;
+    }
 }
 
