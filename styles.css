@@ -17,6 +17,8 @@
     font-display: swap;
 }
 
+[x-cloak] { display: none !important; }
+
 .about-text {
     font-family: monospace;
     font-size: large;
