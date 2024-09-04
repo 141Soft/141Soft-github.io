@@ -140,7 +140,7 @@ a {
     top:0;
     width:100%;
     height:2rem;
-    z-index: 1;
+    z-index: 2;
     background-color: rgba(0,0,0,0.5)
 }
 
@@ -151,7 +151,7 @@ a {
     bottom:0;
     width:100%;
     height:2rem;
-    z-index: 1;
+    z-index: 2;
     background-color: rgba(0,0,0,0.5)
 }
 
@@ -213,7 +213,7 @@ a {
 	border: none;
 	padding: 0;
 	font: inherit;
-    z-index: 10;
+    z-index: 1;
 }
 
 .page-contact {
@@ -225,15 +225,22 @@ a {
 
 @media only screen and (max-width: 768px) {
     /* Mobile */
+
+    .mob-title {
+        position: fixed;
+    }
+
     .site-header {
+        z-index: 3;
         font-size: 1rem;
         display: flex;
-        height: 20%;
+        width: 80%;
+        height: 5rem;
         padding: 1.25rem 0;
-        position: fixed;
-        left: 2.5rem;
-        top: 1rem;
-        writing-mode:horizontal-tb;
+        left: 1rem;
+        top: 0;
+        writing-mode: horizontal-tb;
+        overflow: hidden;
     }
     
     .site-header > h1 {
@@ -246,39 +253,61 @@ a {
     }
     
     .site-nav-list {
+        position: fixed;
+        top: 3rem;
+        left: -1.5rem;
         font-size: 1.2rem;
-        display: flex;
-        justify-content: space-between;
         list-style-type: none;
+    }
+
+    .site-nav-link {
+        margin-right: 1.5rem;
     }
 
     .author {
         position: fixed;
         font-weight: lighter;
         font-size: 1rem;
-        top: 5rem;
+        top: 6rem;
         right: 2.5rem;
     }
 
     .frame {
-        top: 1rem;
+        top: 6rem;
         bottom: 1rem;
         left: 1rem;
         right: 1rem;
     }
 
-    .mask-bottom {
-        height: 1rem;
+    .mask-top {
+        height: 6rem;
+        background-color: rgba(0,0,0,0.8)
     }
 
-    .mask-top {
+    .mask-bottom {
         height: 1rem;
+        background-color: rgba(0,0,0,0.8)
     }
 
     .page-about {
         bottom: 2rem;
         left: 2rem;
         width: 80%;
+    }
+
+    .page-project {
+        width: 80%;
+    }
+
+    .project-list {
+        margin-top: 8rem;
+        margin-left: 0;
+        left: 1rem;
+    }
+
+    .project-top-line {
+        max-width: 80vw;
+        white-space:normal;
     }
 
     .project-title {
@@ -288,6 +317,7 @@ a {
     
     .project-time {
         font-size: 1rem;
+        display: none;
     }
 
     .page-contact {
