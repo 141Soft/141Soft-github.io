@@ -17,9 +17,28 @@
     font-display: swap;
 }
 
+.about-text {
+    font-family: monospace;
+    font-size: large;
+}
+
+.project-slug {
+    font-family: monospace;
+    font-size: large;
+}
+
+.project-link {
+    font-family: monospace;
+    font-size: large;
+}
+
+.contact-text {
+    font-family: monospace;
+    font-size: large;
+}
 
 * {
-    font-family: 'EPSON', 'Times New Roman', Times, serif;
+    font-family: 'EPSON', Times, serif;
 }
 
 html {
@@ -56,11 +75,6 @@ a {
     margin-left: 80%;
     margin-top: 3rem;
     font-size: 2.5rem;
-}
-
-.about {
-    margin-left: 1rem;
-    color:darkslategray;
 }
 
 .shrink-spacing {
