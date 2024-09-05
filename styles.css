@@ -102,11 +102,13 @@ a {
 
 .author {
     position: fixed;
-    font-weight: lighter;
-    font-size: 1rem;
     direction: rtl;
-    top: 2.8rem;
+    top: 3rem;
     right: 8rem;
+}
+
+.author > h1 {
+    font-size: 2rem;
 }
 
 .frame {
@@ -236,7 +238,7 @@ a {
 
     .menu-button {
         right: 2.7rem;
-        top: 10rem;
+        top: 10.5rem;
     }
 
     .site-nav-link {
