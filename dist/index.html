@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>141Soft</title>
-  <script type="module" crossorigin src="https://141Soft.github.io/assets/index-icGOJoNW.js"></script>
-  <link rel="stylesheet" crossorigin href="https://141Soft.github.io/assets/index-C-5qDGnE.css">
+  <script type="module" crossorigin src="https://141Soft.github.io/assets/index-CT72Isoa.js"></script>
+  <link rel="stylesheet" crossorigin href="https://141Soft.github.io/assets/index-BnhIPcdB.css">
 </head>
 <body>
     <div class="frame"></div>
     <div class="mask-top"></div>
     <div class="mask-bottom"></div>
-    <header class="site-header">
+    <header class="site-header" x-data="{display: false}">
         <h1 class="mob-title"><a href="/">141Soft</a></h1>
+        <button class="menu-button" @click="display === false ? display = true : display = false" x-text="display === true ? '▲' : '▼'"></button>
         <nav class="site-nav">
-            <ul class="site-nav-list">
+            <ul class="site-nav-list"  x-cloak  x-show="display === true" x-transition:enter.duration.100ms.origin.top x-transition:leave.duration.100ms.origin.top>
                 <li class="site-nav-link">
                     <a href="/#about">About</a>
                 </li>
