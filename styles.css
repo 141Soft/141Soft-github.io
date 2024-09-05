@@ -46,6 +46,7 @@
 html {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    height: 100vw;
 }
 html::-webkit-scrollbar {
     display: none;
@@ -64,19 +65,6 @@ a {
     text-decoration: none;
     color: inherit;
     z-index: 10;
-}
-
-.title-box {
-    width:100%;
-    letter-spacing: 0.1rem;
-}
-
-.title {
-    color:darkslategray;
-    text-align: left;
-    margin-left: 80%;
-    margin-top: 3rem;
-    font-size: 2.5rem;
 }
 
 .shrink-spacing {
@@ -99,7 +87,6 @@ a {
 }
 
 .site-header > * {
-    flex: 1 1 auto;
     padding-bottom: 0.5rem;
 }
 
@@ -107,6 +94,10 @@ a {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+}
+
+.site-nav-link {
+    margin-top: 5rem;
 }
 
 .author {
@@ -222,65 +213,53 @@ a {
     left: 4rem;
 }
 
+.menu-button {
+    position: fixed;
+    right: 4.7rem;
+    top: 13rem;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+    z-index: 1;
+}
+
 
 @media only screen and (max-width: 768px) {
     /* Mobile */
 
-    .mob-title {
-        position: fixed;
+    .site-header {
+        right: 1rem;
+        top: 1rem;
     }
 
-    .site-header {
-        z-index: 3;
-        font-size: 1rem;
-        display: flex;
-        width: 80%;
-        height: 5rem;
-        padding: 1.25rem 0;
-        left: 1rem;
-        top: 0;
-        writing-mode: horizontal-tb;
-        overflow: hidden;
-    }
-    
-    .site-header > h1 {
-        font-size: 1.5rem;
-    }
-    
-    .site-header > * {
-        flex: 1 1 auto;
-        padding-bottom: 0.5rem;
-    }
-    
-    .site-nav-list {
-        position: fixed;
-        top: 3rem;
-        left: -1.5rem;
-        font-size: 1.2rem;
-        list-style-type: none;
+    .menu-button {
+        right: 2.7rem;
+        top: 10rem;
     }
 
     .site-nav-link {
-        margin-right: 1.5rem;
+        margin-top: 2rem;
     }
 
     .author {
         position: fixed;
         font-weight: lighter;
         font-size: 1rem;
-        top: 6rem;
-        right: 2.5rem;
+        top: 1.2rem;
+        right: 6rem;
     }
 
     .frame {
-        top: 6rem;
+        top: 1rem;
         bottom: 1rem;
         left: 1rem;
         right: 1rem;
     }
 
     .mask-top {
-        height: 6rem;
+        height: 1rem;
         background-color: rgba(0,0,0,0.8)
     }
 
@@ -292,7 +271,7 @@ a {
     .page-about {
         bottom: 2rem;
         left: 2rem;
-        width: 80%;
+        width: 60%;
     }
 
     .page-project {
