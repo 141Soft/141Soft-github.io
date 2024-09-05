@@ -46,7 +46,6 @@
 html {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: 100vw;
 }
 html::-webkit-scrollbar {
     display: none;
