@@ -42,8 +42,8 @@
 
 .theme-button {
     position: fixed;
-    top: 2rem;
-    left: 2rem;
+    bottom: 2rem;
+    left: 49%;
 }
 
 
@@ -286,7 +286,6 @@ button {
 
     .theme-button {
         top: 93.5%;
-        right: 1rem;
     }
 
     .menu-button {
