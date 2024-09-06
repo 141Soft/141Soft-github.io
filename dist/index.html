@@ -52,6 +52,19 @@
         </section>
         <section class="page-project" x-cloak x-show="page === '#projects'" x-transition:enter.duration.1000ms.delay.750ms x-transition:leave.duration.1000ms>
             <ul class="project-list">
+                <li class="project-list-item"  x-data="{ display: false, title: 'Archaeomancer', time: 'Current'}">
+                    <div class="project-top-line">
+                        <h3 class="project-title" x-text="title"></h3>
+                    <p class="project-time" x-text="time"></p>
+                    <button class="project-button" @click="display === false ? display = true : display = false" x-text="display === true ? '▲' : '▼'"></button>
+                    </div>
+                    <p class="project-slug" x-show="display === true" x-transition.duration.500ms>
+                        Experimental companion software for Magic: The Gathering, allowing the users to simulate drafts together alongside collection tracking.
+                        Project is ongoing, however the current working plan is to use Electron and React to create a responsive JavaScript based front end that 
+                        will work for both browsers and desktop while maintaining a similar codebase. Card data will be handled using the Scryfall API and so the 
+                        user data and draft instance creation can be handled by on my end using flask and py-mongo.
+                    </p>
+                </li>
                 <li class="project-list-item"  x-data="{ display: false, title: '141Soft Portfolio', time: '2024 - August'}">
                     <div class="project-top-line">
                         <h3 class="project-title" x-text="title"></h3>
