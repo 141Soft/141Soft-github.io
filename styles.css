@@ -29,11 +29,11 @@
 }
 
 .light-mode > .mask-top {
-    display: none;
+    background-color: rgba(255, 255, 255, 0.5)
 }
 
 .light-mode > .mask-bottom {
-    display: none;
+    background-color: rgba(255, 255, 255, 0.5)
 }
 
 .light-mode > .frame {
@@ -42,8 +42,8 @@
 
 .theme-button {
     position: fixed;
-    bottom: 2rem;
-    left: 49%;
+    top: 2rem;
+    left: 2rem;
 }
 
 
@@ -280,13 +280,9 @@ button {
         top: 1rem;
     }
 
-    .theme-tag {
-        display: none;
-    }
-
     .theme-button {
-        bottom: 40.8rem;
         left: 1rem;
+        top: 1rem;
     }
 
     .menu-button {
@@ -320,7 +316,7 @@ button {
 
     .mask-bottom {
         height: 1rem;
-        background-color: rgba(0,0,0,0.8)
+        background-color: rgba(0,0,0,0.8);
     }
 
     .page-about {
