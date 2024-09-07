@@ -29,11 +29,11 @@
 }
 
 .light-mode > .mask-top {
-    background-color: rgba(255, 255, 255, 0.5)
+    background-color: antiquewhite;
 }
 
 .light-mode > .mask-bottom {
-    background-color: rgba(255, 255, 255, 0.5)
+    background-color: antiquewhite;
 }
 
 .light-mode > .frame {
@@ -43,7 +43,7 @@
 .theme-button {
     position: fixed;
     top: 2rem;
-    left: 2rem;
+    right: 2rem;
 }
 
 
@@ -281,7 +281,7 @@ button {
     }
 
     .theme-button {
-        left: 1rem;
+        right: 0.8rem;
         top: 1rem;
     }
 
